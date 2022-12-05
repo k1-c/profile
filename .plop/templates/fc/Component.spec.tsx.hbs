@@ -1,0 +1,11 @@
+import { render, screen } from '@testing-library/react';
+import { composeStories } from '@storybook/testing-react';
+import * as stories from './{{pascalCase name}}.stories';
+
+const { Default } = composeStories(stories);
+
+test('rendered with default args with children', () => {
+  render(<Default>{{pascalCase name}}</Default>);
+  const element = screen.getByText(/{{pascalCase name}}/i);
+  expect(element).not.toBeNull();
+});

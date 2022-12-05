@@ -1,11 +1,11 @@
 import React from "react";
 
 type {{pascalCase name}}Props = {
-
+  children: React.ReactNode
 }
 
 export const {{pascalCase name}}: React.FC<{{pascalCase name}}Props> = (props) => {
   return (
-    <div>{{pascalCase name}}</div>
+    <div>{props.children}</div>
   );
 }
